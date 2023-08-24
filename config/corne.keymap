@@ -20,7 +20,6 @@
             #binding-cells = <2>;
             tapping-term-ms = <150>;
             quick-tap-ms = <350>;
-            retro-tap;
         };
         cadet_enter: cadet_enter {
             compatible = "zmk,behavior-hold-tap";
@@ -89,10 +88,10 @@
 
             label = "Raise";
             bindings = <
-  &kp ESC          &kp EXCL             &kp AT              &kp HASH             &kp DOLLAR  &kp PERCENT    &kp CARET  &kp AMPERSAND   &kp ASTERISK   &kp PIPE  &kp BACKSLASH   &kp CAPS
-&kp LSHFT  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS    &kp MINUS    &kp EQUAL       &kp LEFT       &kp DOWN     &kp UP      &kp RIGHT    &kp DOT
-  &kp TAB     &kp LESS_THAN   &kp GREATER_THAN        &kp LEFT_BRACE        &kp RIGHT_BRACE    &kp UNDER     &kp PLUS       &kp HOME  &kp PAGE_DOWN  &kp PG_UP        &kp END  &kp COMMA
-                                                            &kp LALT              &kp SPACE     &kp LGUI    &kp LCTRL         &trans        &kp DEL
+  &kp ESC          &kp EXCL           &kp AT               &kp HASH  &kp DOLLAR        &kp PERCENT         &kp CARET  &kp AMPERSAND   &kp ASTERISK   &kp PIPE  &kp BACKSLASH   &kp CAPS
+&kp LSHFT     &kp LESS_THAN   &kp LEFT_BRACE   &kp LEFT_PARENTHESIS   &kp MINUS   &kp LEFT_BRACKET    &kp UNDERSCORE       &kp LEFT       &kp DOWN     &kp UP      &kp RIGHT    &kp DOT
+  &kp TAB  &kp GREATER_THAN  &kp RIGHT_BRACE  &kp RIGHT_PARENTHESIS   &kp EQUAL  &kp RIGHT_BRACKET          &kp PLUS       &kp HOME  &kp PAGE_DOWN  &kp PG_UP        &kp END  &kp COMMA
+                                                           &kp LALT   &kp SPACE           &kp LGUI         &kp LCTRL         &trans        &kp DEL
             >;
         };
 
