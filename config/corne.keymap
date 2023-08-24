@@ -9,6 +9,42 @@
 #include <dt-bindings/zmk/keys.h>
 
 / {
+    behaviors {
+        newlayer_tap: newlayer_tap {
+            compatible = "zmk,behavior-hold-tap";
+            label = "NEWLAYER_TAP";
+            bindings =
+                <&mo>,
+                <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <150>;
+            quick-tap-ms = <350>;
+            retro-tap;
+        };
+        cadet_enter: cadet_enter {
+            compatible = "zmk,behavior-hold-tap";
+            label = "CADET_ENTER";
+            bindings =
+                <&kp>,
+                <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <160>;
+            quick-tap-ms = <350>;
+        };
+        shift_caps_word: shift_caps_word {
+            compatible = "zmk,behavior-tap-dance";
+            label = "SHIFT_CAPS_WORD";
+            #binding-cells = <0>;
+            bindings =
+                <&kp LEFT_SHIFT>,
+                <&caps_word>;
+
+            tapping-term-ms = <300>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -21,10 +57,10 @@
 
             label = "Base";
             bindings = <
-    &kp ESCAPE  &kp Q  &kp W         &kp F        &kp P         &kp B               &kp J            &kp L      &kp U    &kp Y  &kp SEMICOLON       &kp SINGLE_QUOTE
-&kp LEFT_SHIFT  &kp A  &kp R         &kp S        &kp T         &kp G               &kp M            &kp N      &kp E    &kp I          &kp O  &mt RIGHT_SHIFT ENTER
-       &kp TAB  &kp Z  &kp X         &kp C        &kp D         &kp V               &kp K            &kp H  &kp COMMA  &kp DOT       &kp FSLH              &kp GRAVE
-                              &kp LEFT_ALT  &lt 1 SPACE  &kp LEFT_GUI    &kp LEFT_CONTROL  &lt 2 BACKSPACE  &lt 3 DEL
+      &kp ESCAPE  &kp Q  &kp W         &kp F                  &kp P         &kp B               &kp J                      &kp L                       &kp U    &kp Y  &kp SEMICOLON                &kp SINGLE_QUOTE
+&shift_caps_word  &kp A  &kp R         &kp S                  &kp T         &kp G               &kp M                      &kp N                       &kp E    &kp I          &kp O  &cadet_enter RIGHT_SHIFT ENTER
+         &kp TAB  &kp Z  &kp X         &kp C                  &kp D         &kp V               &kp K                      &kp H                   &kp COMMA  &kp DOT       &kp FSLH                       &kp GRAVE
+                                &kp LEFT_ALT  &newlayer_tap 1 SPACE  &kp LEFT_GUI    &kp LEFT_CONTROL  &newlayer_tap 2 BACKSPACE  &newlayer_tap 3 LC(DELETE)
             >;
         };
 
@@ -62,10 +98,10 @@
 
         layer_3 {
             bindings = <
-&bt BT_CLR          &bt BT_SEL 0          &bt BT_SEL 1       &bt BT_SEL 2       &bt BT_SEL 3      &bt BT_SEL 4       &trans  &trans  &trans  &trans  &trans  &kp K_SLEEP
-    &trans  &kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_INC  &kp C_VOLUME_DOWN  &kp C_VOLUME_DOWN        &kp K_MUTE       &trans  &trans  &trans  &trans  &trans       &trans
-    &trans                &trans                &trans         &kp K_PREV         &kp C_NEXT  &kp K_PLAY_PAUSE       &trans  &trans  &trans  &trans  &trans       &trans
-                                                             &kp LEFT_ALT             &trans      &kp LEFT_GUI    &kp LCTRL  &trans  &trans
+&bt BT_CLR          &bt BT_SEL 0          &bt BT_SEL 1       &bt BT_SEL 2       &bt BT_SEL 3      &bt BT_SEL 4       &trans         &trans  &trans  &trans  &trans  &kp K_SLEEP
+    &trans  &kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_INC  &kp C_VOLUME_DOWN  &kp C_VOLUME_DOWN        &kp K_MUTE       &trans         &trans  &trans  &trans  &trans       &trans
+    &trans                &trans                &trans         &kp K_PREV         &kp C_NEXT  &kp K_PLAY_PAUSE       &trans         &trans  &trans  &trans  &trans       &trans
+                                                             &kp LEFT_ALT          &kp SPACE      &kp LEFT_GUI    &kp LCTRL  &kp BACKSPACE  &trans
             >;
         };
     };
