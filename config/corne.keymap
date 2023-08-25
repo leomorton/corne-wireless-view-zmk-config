@@ -18,8 +18,8 @@
                 <&kp>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <150>;
-            quick-tap-ms = <350>;
+            tapping-term-ms = <130>;
+            quick-tap-ms = <290>;
         };
         cadet_enter: cadet_enter {
             compatible = "zmk,behavior-hold-tap";
@@ -29,8 +29,7 @@
                 <&kp>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <160>;
-            quick-tap-ms = <350>;
+            tapping-term-ms = <120>;
         };
         shift_caps_word: shift_caps_word {
             compatible = "zmk,behavior-tap-dance";
@@ -40,7 +39,7 @@
                 <&kp LEFT_SHIFT>,
                 <&caps_word>;
 
-            tapping-term-ms = <300>;
+            tapping-term-ms = <120>;
         };
     };
 
@@ -56,10 +55,10 @@
 
             label = "Base";
             bindings = <
-      &kp ESCAPE  &kp Q  &kp W         &kp F                  &kp P         &kp B               &kp J                      &kp L                       &kp U    &kp Y  &kp SEMICOLON                &kp SINGLE_QUOTE
-&shift_caps_word  &kp A  &kp R         &kp S                  &kp T         &kp G               &kp M                      &kp N                       &kp E    &kp I          &kp O  &cadet_enter RIGHT_SHIFT ENTER
-         &kp TAB  &kp Z  &kp X         &kp C                  &kp D         &kp V               &kp K                      &kp H                   &kp COMMA  &kp DOT       &kp FSLH                       &kp GRAVE
-                                &kp LEFT_ALT  &newlayer_tap 1 SPACE  &kp LEFT_GUI    &kp LEFT_CONTROL  &newlayer_tap 2 BACKSPACE  &newlayer_tap 3 LC(DELETE)
+      &kp ESCAPE  &kp Q  &kp W         &kp F                  &kp P         &kp B               &kp J                      &kp L                   &kp U    &kp Y  &kp SEMICOLON                &kp SINGLE_QUOTE
+&shift_caps_word  &kp A  &kp R         &kp S                  &kp T         &kp G               &kp M                      &kp N                   &kp E    &kp I          &kp O  &cadet_enter RIGHT_SHIFT ENTER
+         &kp TAB  &kp Z  &kp X         &kp C                  &kp D         &kp V               &kp K                      &kp H               &kp COMMA  &kp DOT       &kp FSLH                       &kp GRAVE
+                                &kp LEFT_ALT  &newlayer_tap 1 SPACE  &kp LEFT_GUI    &kp LEFT_CONTROL  &newlayer_tap 2 BACKSPACE  &newlayer_tap 3 DELETE
             >;
         };
 
@@ -72,9 +71,9 @@
 
             label = "Lower";
             bindings = <
-    &kp ESCAPE  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp NUMBER_5    &kp NUMBER_6   &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp NUMBER_0    &kp F12
-&kp LEFT_SHIFT        &kp F1        &kp F2        &kp F3        &kp F4        &kp F5          &kp F6         &kp F7        &kp F8        &kp F9       &kp F10    &kp F11
-       &kp TAB         &none         &none     &kp COMMA    &kp PERIOD         &none          &trans         &trans        &trans         &none         &none  &kp TILDE
+    &kp ESCAPE  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp NUMBER_5    &kp NUMBER_6   &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp NUMBER_0    &none
+&kp LEFT_SHIFT         &none         &none     &kp COMMA    &kp PERIOD         &none           &none      &kp MINUS      &kp PLUS         &none         &none  &kp F12
+       &kp TAB        &kp F1        &kp F2        &kp F3        &kp F4        &kp F5          &kp F6         &kp F7        &kp F8        &kp F9       &kp F10  &kp F11
                                             &kp LEFT_ALT        &trans  &kp LEFT_GUI       &kp LCTRL  &kp BACKSPACE    &kp DELETE
             >;
         };
@@ -97,10 +96,10 @@
 
         layer_3 {
             bindings = <
-&bt BT_CLR          &bt BT_SEL 0          &bt BT_SEL 1       &bt BT_SEL 2       &bt BT_SEL 3      &bt BT_SEL 4       &trans         &trans  &trans  &trans  &trans  &kp K_SLEEP
-    &trans  &kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_INC  &kp C_VOLUME_DOWN  &kp C_VOLUME_DOWN        &kp K_MUTE       &trans         &trans  &trans  &trans  &trans       &trans
-    &trans                &trans                &trans         &kp K_PREV         &kp C_NEXT  &kp K_PLAY_PAUSE       &trans         &trans  &trans  &trans  &trans       &trans
-                                                             &kp LEFT_ALT          &kp SPACE      &kp LEFT_GUI    &kp LCTRL  &kp BACKSPACE  &trans
+&bt BT_CLR          &bt BT_SEL 0          &bt BT_SEL 1       &bt BT_SEL 2     &bt BT_SEL 3  &bt BT_SEL 4       &trans         &trans  &trans  &trans  &trans  &kp C_SLEEP
+    &trans  &kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_INC  &kp C_VOLUME_DOWN  &kp C_VOLUME_UP    &kp C_MUTE       &trans         &trans  &trans  &trans  &trans       &trans
+    &trans                &trans                &trans         &kp C_PREV       &kp C_NEXT    &kp C_NEXT       &trans         &trans  &trans  &trans  &trans       &trans
+                                                             &kp LEFT_ALT        &kp SPACE  &kp LEFT_GUI    &kp LCTRL  &kp BACKSPACE  &trans
             >;
         };
     };
