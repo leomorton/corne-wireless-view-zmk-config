@@ -41,6 +41,46 @@
 
             tapping-term-ms = <280>;
         };
+        bksp_del: bksp_del {
+            compatible = "zmk,behavior-mod-morph";
+            label = "BKSP_DEL";
+            bindings =
+                <&kp BACKSPACE>,
+                <&kp DELETE>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT)>;
+        };
+        question_minus: question_minus {
+            compatible = "zmk,behavior-mod-morph";
+            label = "QUESTION_MINUS";
+            bindings =
+                <&kp MINUS>,
+                <&kp QUESTION>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT)>;
+        };
+        nine_pipe: nine_pipe {
+            compatible = "zmk,behavior-mod-morph";
+            label = "NINE_PIPE";
+            bindings =
+                <&kp KP_NUMBER_9>,
+                <&kp PIPE>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT)>;
+        };
+        zero_backslash: zero_backslash {
+            compatible = "zmk,behavior-mod-morph";
+            label = "ZERO_BACKSLASH";
+            bindings =
+                <&kp KP_NUMBER_0>,
+                <&kp BACKSLASH>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT)>;
+        };
     };
 
     keymap {
@@ -55,10 +95,10 @@
 
             label = "Base";
             bindings = <
-      &kp ESCAPE  &kp Q  &kp W         &kp F                  &kp P         &kp B               &kp J                      &kp L                   &kp U    &kp Y  &kp SEMICOLON                &kp SINGLE_QUOTE
-&shift_caps_word  &kp A  &kp R         &kp S                  &kp T         &kp G               &kp M                      &kp N                   &kp E    &kp I          &kp O  &cadet_enter RIGHT_SHIFT ENTER
-         &kp TAB  &kp Z  &kp X         &kp C                  &kp D         &kp V               &kp K                      &kp H               &kp COMMA  &kp DOT       &kp FSLH                       &kp MINUS
-                                &kp LEFT_ALT  &newlayer_tap 1 SPACE  &kp LEFT_GUI    &kp LEFT_CONTROL  &newlayer_tap 2 BACKSPACE  &newlayer_tap 3 DELETE
+      &kp ESCAPE  &kp Q  &kp W         &kp F                  &kp P         &kp B               &kp J                  &kp L                   &kp U    &kp Y    &kp SEMICOLON                &kp SINGLE_QUOTE
+&shift_caps_word  &kp A  &kp R         &kp S                  &kp T         &kp G               &kp M                  &kp N                   &kp E    &kp I            &kp O  &cadet_enter RIGHT_SHIFT ENTER
+         &kp TAB  &kp Z  &kp X         &kp C                  &kp D         &kp V               &kp K                  &kp H               &kp COMMA  &kp DOT  &question_minus                       &bksp_del
+                                &kp LEFT_ALT  &newlayer_tap 1 SPACE  &kp LEFT_GUI    &kp LEFT_CONTROL  &newlayer_tap 2 SPACE  &newlayer_tap 3 DELETE
             >;
         };
 
@@ -72,7 +112,7 @@
             label = "NUMFUN";
             bindings = <
     &kp ESCAPE  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp NUMBER_5    &kp NUMBER_6   &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp NUMBER_0    &none
-&kp LEFT_SHIFT         &none         &none     &kp COMMA    &kp PERIOD         &none           &none      &kp MINUS      &kp PLUS         &none         &none  &kp F12
+&kp LEFT_SHIFT         &none         &none         &none         &none         &none           &none          &none         &none         &none         &none  &kp F12
        &kp TAB        &kp F1        &kp F2        &kp F3        &kp F4        &kp F5          &kp F6         &kp F7        &kp F8        &kp F9       &kp F10  &kp F11
                                             &kp LEFT_ALT        &trans  &kp LEFT_GUI       &kp LCTRL  &kp BACKSPACE    &kp DELETE
             >;
@@ -87,10 +127,10 @@
 
             label = "SYMNAV";
             bindings = <
-  &kp ESC          &kp EXCL           &kp AT               &kp HASH  &kp DOLLAR        &kp PERCENT    &kp CARET  &kp AMPERSAND   &kp ASTERISK   &kp PIPE  &kp BACKSLASH  &kp TILDE
-&kp LSHFT     &kp LESS_THAN   &kp LEFT_BRACE   &kp LEFT_PARENTHESIS   &kp EQUAL   &kp LEFT_BRACKET        &none       &kp LEFT       &kp DOWN     &kp UP      &kp RIGHT   &kp CAPS
-  &kp TAB  &kp GREATER_THAN  &kp RIGHT_BRACE  &kp RIGHT_PARENTHESIS    &kp PLUS  &kp RIGHT_BRACKET        &none       &kp HOME  &kp PAGE_DOWN  &kp PG_UP        &kp END  &kp GRAVE
-                                                           &kp LALT   &kp SPACE           &kp LGUI    &kp LCTRL         &trans        &kp DEL
+  &kp ESC      &kp NUMBER_1     &kp NUMBER_2           &kp NUMBER_3  &kp NUMBER_4       &kp NUMBER_5    &kp NUMBER_6  &kp NUMBER_7   &kp NUMBER_8  &nine_pipe  &zero_backslash  &kp SLASH
+&kp LSHFT     &kp LESS_THAN   &kp LEFT_BRACE   &kp LEFT_PARENTHESIS     &kp EQUAL   &kp LEFT_BRACKET        &kp PLUS      &kp LEFT       &kp DOWN      &kp UP        &kp RIGHT   &kp CAPS
+  &kp TAB  &kp GREATER_THAN  &kp RIGHT_BRACE  &kp RIGHT_PARENTHESIS     &kp UNDER  &kp RIGHT_BRACKET           &none      &kp HOME  &kp PAGE_DOWN   &kp PG_UP          &kp END  &kp GRAVE
+                                                           &kp LALT     &kp SPACE           &kp LGUI       &kp LCTRL        &trans        &kp DEL
             >;
         };
 
