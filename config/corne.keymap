@@ -87,10 +87,10 @@
 
             label = "SYMNAV";
             bindings = <
-  &kp ESC          &kp EXCL           &kp AT               &kp HASH  &kp DOLLAR        &kp PERCENT    &kp CARET  &kp AMPERSAND   &kp ASTERISK   &kp PIPE  &kp BACKSLASH  &kp TILDE
-&kp LSHFT     &kp LESS_THAN   &kp LEFT_BRACE   &kp LEFT_PARENTHESIS   &kp EQUAL   &kp LEFT_BRACKET        &none       &kp LEFT       &kp DOWN     &kp UP      &kp RIGHT   &kp CAPS
-  &kp TAB  &kp GREATER_THAN  &kp RIGHT_BRACE  &kp RIGHT_PARENTHESIS    &kp PLUS  &kp RIGHT_BRACKET        &none       &kp HOME  &kp PAGE_DOWN  &kp PG_UP        &kp END  &kp GRAVE
-                                                           &kp LALT   &kp SPACE           &kp LGUI    &kp LCTRL         &trans        &kp DEL
+  &kp ESC          &kp EXCL             &kp AT         &kp HASH             &kp DOLLAR  &kp PERCENT    &kp CARET  &kp AMPERSAND   &kp ASTERISK   &kp PIPE  &kp BACKSLASH  &kp TILDE
+&kp LSHFT     &kp LESS_THAN   &kp LEFT_BRACKET   &kp LEFT_BRACE   &kp LEFT_PARENTHESIS    &kp EQUAL        &none       &kp LEFT       &kp DOWN     &kp UP      &kp RIGHT   &kp CAPS
+  &kp TAB  &kp GREATER_THAN  &kp RIGHT_BRACKET  &kp RIGHT_BRACE  &kp RIGHT_PARENTHESIS     &kp PLUS        &none       &kp HOME  &kp PAGE_DOWN  &kp PG_UP        &kp END  &kp GRAVE
+                                                       &kp LALT              &kp SPACE     &kp LGUI    &kp LCTRL         &trans        &kp DEL
             >;
         };
 
