@@ -57,7 +57,7 @@
 &kp GRAVE                       &kp Q  &kp W  &kp F             &kp P                        &kp B           &kp J                &kp L                      &kp U                   &kp Y    &kp SEMICOLON  &kp SINGLE_QUOTE
 &cadet_hold_tap LEFT_SHIFT TAB  &kp A  &kp R  &kp S             &kp T                        &kp G           &kp M                &kp N                      &kp E                   &kp I    &kp O          &cadet_hold_tap RIGHT_SHIFT ENTER
 &kp LEFT_ALT                    &kp Z  &kp X  &kp C             &kp D                        &kp V           &kp K                &kp H                      &kp COMMA               &kp DOT  &kp FSLH       &newlayer_tap 3 MINUS
-                                              &kp LEFT_CONTROL  &cadet_hold_tap LCTRL SPACE  &kp LEFT_GUI    &newlayer_tap 2 TAB  &newlayer_tap 2 BACKSPACE  &newlayer_tap 3 DELETE
+                                              &kp LEFT_CONTROL  &cadet_hold_tap LCTRL SPACE  &kp LEFT_GUI    &newlayer_tap 1 TAB  &newlayer_tap 2 BACKSPACE  &newlayer_tap 3 DELETE
             >;
         };
 
