@@ -13,25 +13,23 @@
         newlayer_tap: newlayer_tap {
             compatible = "zmk,behavior-hold-tap";
             label = "NEWLAYER_TAP";
-            bindings =
-                <&mo>,
-                <&kp>;
+            bindings = <&mo>, <&kp>;
 
             #binding-cells = <2>;
             tapping-term-ms = <145>;
             quick-tap-ms = <290>;
         };
+
         cadet_hold_tap: cadet_hold_tap {
             compatible = "zmk,behavior-hold-tap";
             label = "CADET_HOLD_TAP";
-            bindings =
-                <&kp>,
-                <&kp>;
+            bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
             tapping-term-ms = <145>;
             quick-tap-ms = <290>;
         };
+
         caps_hard_press: caps_hard_press {
             compatible = "zmk,behavior-sticky-key";
             label = "CAPS_HARD_PRESS";
@@ -96,9 +94,9 @@
 
         adjust_layer {
             bindings = <
-&bt BT_CLR  &bt BT_SEL 0          &bt BT_SEL 1          &bt BT_SEL 2       &bt BT_SEL 3     &bt BT_SEL 4    &trans    &trans      &trans      &trans  &kp F12  &kp C_SLEEP
+&bt BT_CLR  &kp F1                &kp F2                &kp F3             &kp F4           &kp F5          &kp F6    &kp F7      &kp F8      &kp F9  &kp F10  &kp C_SLEEP
 &trans      &kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_INC  &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &kp C_MUTE      &kp C_PP  &kp C_PREV  &kp C_NEXT  &trans  &kp F11  &none
-&trans      &kp F1                &kp F2                &kp F3             &kp F4           &kp F5          &kp F6    &kp F7      &kp F8      &kp F9  &kp F10  &trans
+&trans      &bt BT_SEL 0          &bt BT_SEL 1          &bt BT_SEL 2       &bt BT_SEL 3     &bt BT_SEL 4    &trans    &trans      &trans      &trans  &kp F12  &trans
                                                         &trans             &trans           &trans          &trans    &trans      &trans
             >;
 
