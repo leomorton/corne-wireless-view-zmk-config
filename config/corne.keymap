@@ -39,6 +39,16 @@
             quick-release;
             ignore-modifiers;
         };
+
+        hold_keypress: hold_keypress {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HOLD_KEYPRESS";
+            bindings = <&kp>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <180>;
+            flavor = "balanced";
+        };
     };
 
     keymap {
@@ -53,10 +63,10 @@
 
             label = "Base";
             bindings = <
-&kp TAB         &kp Q  &kp W  &kp F         &kp P      &kp B           &kp J       &kp L                      &kp U                   &kp Y    &kp SEMICOLON  &kp SINGLE_QUOTE
-&kp LEFT_SHIFT  &kp A  &kp R  &kp S         &kp T      &kp G           &kp M       &kp N                      &kp E                   &kp I    &kp O          &cadet_hold_tap RIGHT_SHIFT ENTER
-&kp LCTRL       &kp Z  &kp X  &kp C         &kp D      &kp V           &kp K       &kp H                      &kp COMMA               &kp DOT  &kp FSLH       &kp MINUS
-                              &kp LEFT_ALT  &kp SPACE  &kp LEFT_GUI    &kp DELETE  &newlayer_tap 1 BACKSPACE  &newlayer_tap 2 ESCAPE
+&kp TAB         &hold_keypress LEFT_BRACE Q  &kp W  &kp F         &kp P      &hold_keypress LEFT_PARENTHESIS B    &hold_keypress RIGHT_BRACE J  &kp L                      &kp U                      &kp Y                        &hold_keypress RIGHT_BRACE SEMICOLON  &kp SINGLE_QUOTE
+&kp LEFT_SHIFT  &kp A                        &kp R  &kp S         &kp T      &kp G                                &kp M                         &kp N                      &kp E                      &kp I                        &kp O                                 &cadet_hold_tap RIGHT_SHIFT ENTER
+&kp LCTRL       &kp Z                        &kp X  &kp C         &kp D      &kp V                                &kp K                         &kp H                      &hold_keypress PLUS COMMA  &hold_keypress EQUAL PERIOD  &kp FSLH                              &kp MINUS
+                                                    &kp LEFT_ALT  &kp SPACE  &kp LEFT_GUI                         &kp DELETE                    &newlayer_tap 1 BACKSPACE  &newlayer_tap 2 ESCAPE
             >;
         };
 
