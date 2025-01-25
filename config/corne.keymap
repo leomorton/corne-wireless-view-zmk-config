@@ -53,10 +53,10 @@
 
             label = "Base";
             bindings = <
-&kp TAB         &kp Q  &kp W  &kp F         &kp P                           &kp B           &kp J                   &kp L                      &kp U                   &kp Y    &kp SEMICOLON  &kp SINGLE_QUOTE
-&kp LEFT_SHIFT  &kp A  &kp R  &kp S         &kp T                           &kp G           &kp M                   &kp N                      &kp E                   &kp I    &kp O          &cadet_hold_tap RIGHT_SHIFT ENTER
-&kp LCTRL       &kp Z  &kp X  &kp C         &kp D                           &kp V           &kp K                   &kp H                      &kp COMMA               &kp DOT  &kp FSLH       &newlayer_tap 3 MINUS
-                              &kp LEFT_ALT  &cadet_hold_tap LEFT_ALT SPACE  &kp LEFT_GUI    &newlayer_tap 1 DELETE  &newlayer_tap 2 BACKSPACE  &newlayer_tap 3 ESCAPE
+&kp TAB         &kp Q  &kp W  &kp F         &kp P             &kp B                             &kp J                      &kp L                   &kp U                   &kp Y    &kp SEMICOLON  &kp SINGLE_QUOTE
+&kp LEFT_SHIFT  &kp A  &kp R  &kp S         &kp T             &kp G                             &kp M                      &kp N                   &kp E                   &kp I    &kp O          &cadet_hold_tap RIGHT_SHIFT ENTER
+&kp LCTRL       &kp Z  &kp X  &kp C         &kp D             &kp V                             &kp K                      &kp H                   &kp COMMA               &kp DOT  &kp FSLH       &newlayer_tap 3 MINUS
+                              &kp LEFT_ALT  &kp LEFT_COMMAND  &cadet_hold_tap LEFT_ALT SPACE    &newlayer_tap 2 BACKSPACE  &newlayer_tap 1 DELETE  &newlayer_tap 3 ESCAPE
             >;
         };
 
